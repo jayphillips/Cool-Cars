@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Cool_Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6o-DY-IZE">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleCell" rowHeight="250" id="0lX-79-iJf" customClass="VehicleCell" customModule="Cool_Cars" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0lX-79-iJf" id="SL2-7T-bLJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2020Blazer" translatesAutoresizingMaskIntoConstraints="NO" id="yc0-7a-dX7">
+                                                    <rect key="frame" x="0.0" y="10" width="375" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="180" id="myB-O9-Hbe"/>
+                                                        <constraint firstAttribute="width" constant="375" id="y6D-Sz-S0o"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020 Chevy Blazer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-FM-n55">
+                                                    <rect key="frame" x="107" y="200" width="161" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yc0-7a-dX7" firstAttribute="centerX" secondItem="SL2-7T-bLJ" secondAttribute="centerX" id="0gc-84-l4E"/>
+                                                <constraint firstAttribute="trailing" secondItem="yc0-7a-dX7" secondAttribute="trailing" id="cIX-id-pJa"/>
+                                                <constraint firstItem="PD0-FM-n55" firstAttribute="centerX" secondItem="SL2-7T-bLJ" secondAttribute="centerX" id="gST-Vu-Jcg"/>
+                                                <constraint firstItem="PD0-FM-n55" firstAttribute="top" secondItem="yc0-7a-dX7" secondAttribute="bottom" constant="10" id="kb0-k6-C0d"/>
+                                                <constraint firstItem="yc0-7a-dX7" firstAttribute="top" secondItem="SL2-7T-bLJ" secondAttribute="top" constant="10" id="ltf-Yy-uCp"/>
+                                                <constraint firstItem="yc0-7a-dX7" firstAttribute="leading" secondItem="SL2-7T-bLJ" secondAttribute="leading" id="rTc-ry-qlQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="vehicleImage" destination="yc0-7a-dX7" id="XQI-Na-Bwg"/>
+                                            <outlet property="vehicleTitle" destination="PD0-FM-n55" id="jPn-da-dOD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool Cars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-0j-anU">
+                                <rect key="frame" x="108" y="25" width="159" height="48"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a vehicle below to get started." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inw-44-Xo2">
+                                <rect key="frame" x="18.5" y="88" width="338" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19869825777026703" green="0.30156462184728094" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A6o-DY-IZE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8DM-KV-Jbb"/>
+                            <constraint firstItem="aZf-0j-anU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Akx-jI-VWi"/>
+                            <constraint firstAttribute="bottom" secondItem="A6o-DY-IZE" secondAttribute="bottom" id="C2I-Kh-EWg"/>
+                            <constraint firstItem="inw-44-Xo2" firstAttribute="top" secondItem="aZf-0j-anU" secondAttribute="bottom" constant="15" id="I7J-qi-xIb"/>
+                            <constraint firstItem="aZf-0j-anU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Rt4-ru-wQM"/>
+                            <constraint firstItem="A6o-DY-IZE" firstAttribute="top" secondItem="inw-44-Xo2" secondAttribute="bottom" constant="25" id="WBD-17-tRY"/>
+                            <constraint firstItem="inw-44-Xo2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WCe-Aq-trD"/>
+                            <constraint firstItem="A6o-DY-IZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jFe-7L-LAI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="vehicleTableView" destination="A6o-DY-IZE" id="bo3-Xo-oh8"/>
+                        <segue destination="ujB-Uo-bKk" kind="show" identifier="toVehicleDetailViewController" id="byu-gK-pkb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="115.59220389805098"/>
+        </scene>
+        <!--Vehicle Detail View Controller-->
+        <scene sceneID="qvS-d3-dUa">
+            <objects>
+                <viewController id="ujB-Uo-bKk" customClass="VehicleDetailViewController" customModule="Cool_Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ntN-SY-Ywm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2020Blazer" translatesAutoresizingMaskIntoConstraints="NO" id="s5T-8f-Vtg">
+                                <rect key="frame" x="16" y="86" width="343" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="84D-LY-s4q"/>
+                                    <constraint firstAttribute="width" constant="343" id="ip1-qV-RbJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020 Chevy Blazer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0I-zL-gaG">
+                                <rect key="frame" x="56.5" y="25" width="262" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="0.1986982578" green="0.30156462179999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95p-Rl-To3">
+                                <rect key="frame" x="156.5" y="582" width="62" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="HOME">
+                                    <color key="titleColor" red="0.1986982578" green="0.30156462179999999" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="ujB-Uo-bKk" eventType="touchUpInside" id="ieC-v8-vIc"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CKz-2W-fsl">
+                                <rect key="frame" x="22" y="436" width="331" height="130"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2020BlazerEng" translatesAutoresizingMaskIntoConstraints="NO" id="zzo-e0-X4X">
+                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="130"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2020BlazerGasMi" translatesAutoresizingMaskIntoConstraints="NO" id="RM3-Wf-WrB">
+                                        <rect key="frame" x="110.5" y="0.0" width="110" height="130"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2020BlazerTrans" translatesAutoresizingMaskIntoConstraints="NO" id="N7k-py-33o">
+                                        <rect key="frame" x="220.5" y="0.0" width="110.5" height="130"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="NIX-Bb-3EQ"/>
+                                    <constraint firstAttribute="width" constant="331" id="PoZ-fq-z0f"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ob7-b6-oi0" firstAttribute="trailing" secondItem="s5T-8f-Vtg" secondAttribute="trailing" constant="16" id="2WV-0x-J0A"/>
+                            <constraint firstItem="CKz-2W-fsl" firstAttribute="top" secondItem="s5T-8f-Vtg" secondAttribute="bottom" constant="50" id="DyR-lo-fdb"/>
+                            <constraint firstItem="s5T-8f-Vtg" firstAttribute="top" secondItem="w0I-zL-gaG" secondAttribute="bottom" constant="20" id="L45-GT-xRj"/>
+                            <constraint firstItem="95p-Rl-To3" firstAttribute="centerX" secondItem="ntN-SY-Ywm" secondAttribute="centerX" id="ZR4-eE-NcO"/>
+                            <constraint firstItem="s5T-8f-Vtg" firstAttribute="leading" secondItem="ob7-b6-oi0" secondAttribute="leading" constant="16" id="ZrG-1Y-LrC"/>
+                            <constraint firstItem="w0I-zL-gaG" firstAttribute="top" secondItem="ob7-b6-oi0" secondAttribute="top" constant="25" id="axn-UH-o9b"/>
+                            <constraint firstItem="w0I-zL-gaG" firstAttribute="centerX" secondItem="ntN-SY-Ywm" secondAttribute="centerX" id="bGS-ho-lvE"/>
+                            <constraint firstItem="CKz-2W-fsl" firstAttribute="centerX" secondItem="ntN-SY-Ywm" secondAttribute="centerX" id="m1G-KZ-Aqe"/>
+                            <constraint firstItem="ob7-b6-oi0" firstAttribute="bottom" secondItem="95p-Rl-To3" secondAttribute="bottom" constant="25" id="vZ1-bd-Tob"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ob7-b6-oi0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lKO-GG-l5c"/>
+                    <connections>
+                        <outlet property="engineImage" destination="zzo-e0-X4X" id="kd0-Ci-zLx"/>
+                        <outlet property="gasMilageImage" destination="RM3-Wf-WrB" id="egD-9t-DQV"/>
+                        <outlet property="transmissionImage" destination="N7k-py-33o" id="XeL-dH-W9P"/>
+                        <outlet property="vehicleImage" destination="s5T-8f-Vtg" id="pkX-4y-M9F"/>
+                        <outlet property="vehicleTitle" destination="w0I-zL-gaG" id="mPL-yS-udn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eml-Mx-AeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2020Blazer" width="640" height="480"/>
+        <image name="2020BlazerEng" width="356" height="364"/>
+        <image name="2020BlazerGasMi" width="310" height="322"/>
+        <image name="2020BlazerTrans" width="260" height="322"/>
+    </resources>
+</document>
